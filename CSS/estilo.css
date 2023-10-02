@@ -12,10 +12,21 @@ body {
 
 /* header */
 
+header {
+    border-top: solid 15px rgb(2, 1, 19);
+
+}
+
+
 .miNavbar {
     background-color: #fafafa;
     color: black;
-    
+
+}
+
+.misUls :hover {
+    background-color: black;
+    color: wheat;
 }
 
 
@@ -23,48 +34,73 @@ body {
     width: 170px;
 }
 
+
 /* banner */
 
-.banner {
-    background-image: url(../img/tienda-de-ropa-urbana.jpg);
-    height: calc(100vh - 100px);
-    position: relative;
+.banNer {
     display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.banner::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.2);
-    z-index: 0;
-}
-
-.bannerContenido {
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-}
-
-.bannerContenido h2 {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #fafafa;
-    margin-bottom: 10px;
-}
-
-.bannerContenido p {
-    color: #fafafa;
-    font-size: 4rem;
+    font-size: 30px;
     text-transform: uppercase;
-    
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 85vh;
+    background-image: linear-gradient(0deg,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)), url(../img/tienda-de-ropa-urbana.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
 }
 
+.bTn {
+    font-family: serif;
+    background-color: #050505;
+    padding: 15px 20px;
+    text-align: center;
+    color: rgb(253, 250, 250);
+    border-radius: 20px;
+    border-color: #fafafa;
+    font-size: 18px;
+    margin: 4px 2px;
+    cursor: pointer;
+
+}
+
+@media (max-width:500px) {
+
+    .banNer {
+        font-size: 15px;
+        height: 40vh;
+    }
+
+    .bannerContenido {
+        font-size: 15px;
+    }
+
+    .bannerContenido h2 {
+        font-size: 18px;
+    }
+
+    .bTn {
+        padding: 2px 2px;
+    }
+}
+
+/* Tarjetas */
+
+.cardHerramienta {
+    text-align: center;
+    margin: 10px;
+
+}
+
+.cardProducto {
+    margin-bottom: 20px;
+}
+
+.cardHerramienta h5 {
+    text-transform: uppercase;
+    color: rgb(13, 3, 65);
+}
